@@ -1,8 +1,5 @@
-// import { presetForms } from "@julr/unocss-preset-forms";
-// import extractorSvelte from "@unocss/extractor-svelte";
 import {
 	defineConfig,
-	presetIcons,
 	presetUno,
 	presetWebFonts,
 	transformerVariantGroup,
@@ -10,35 +7,31 @@ import {
 
 export default defineConfig({
 	presets: [
-		// presetForms(),
-		presetIcons({
-			extraProperties: {
-				display: "inline-block",
-				"vertical-align": "middle",
-			},
-		}),
 		presetUno(),
 		presetWebFonts({
 			fonts: {
-				ptsans: "PT Sans",
-				roboto: "Roboto",
-				raleway: "Raleway",
+				kumbhsans: {
+					name: "Kumbh Sans",
+					weights: [400, 700],
+				},
 			},
 		}),
 	],
 	theme: {
 		colors: {
-			brand: {
-				primary: "#0C2D57", // #0A1D56
-				secondary: "#FF6868",
-				accent: "#0C2D57",
-			},
+			orange: "hsl(26, 100%, 55%)",
+			pale_orange: "hsl(25, 100%, 94%)",
+			dark_blue: "hsl(220, 13%, 13%)",
+			dark_grayish_blue: "hsl(219, 9%, 45%)",
+			grayish_blue: "hsl(220, 14%, 75%)",
+			light_grayish_blue: "hsl(223, 64%, 98%)",
+			white: "hsl(0, 0%, 100%)",
+			black: "hsl(0, 0%, 0%)",
+			lightbox_black: "hsl(0, 0%, 0%, 75%)", // (with 75% opacity for lightbox background)
 		},
 	},
-	// extractors: [extractorSvelte()],
 	transformers: [transformerVariantGroup()],
 	shortcuts: {
-		"bg-accent": "bg-blue-500 text-white",
-		container: "max-w-7xl mx-auto",
+		container: "max-w-6xl mx-auto",
 	},
 });
