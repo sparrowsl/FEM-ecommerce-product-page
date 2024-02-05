@@ -5,15 +5,14 @@
 	},
 	"formatter": {
 		"lineWidth": 100,
-		"ignore": ["node_modules", ".svelte-kit", ".husky"]
+		"ignore": ["node_modules", "dist", ".husky"]
 	},
 	"linter": {
-		"ignore": ["node_modules", ".svelte-kit", ".husky"],
+		"ignore": ["node_modules", "dist", ".husky"],
 		"rules": {
 			"recommended": true,
 			"a11y": {
-				"recommended": true,
-				"useButtonType": "off"
+				"recommended": true
 			},
 			"correctness": {
 				"recommended": true,
