@@ -1,5 +1,6 @@
 import { For, createSignal } from "solid-js";
 import Header from "./components/Header.jsx";
+import ProductDetails from "./components/ProductDetails.jsx";
 import { Thumbnail } from "./components/Thumbnail.jsx";
 
 export const [selectedImage, setSelectedImage] = createSignal(
@@ -7,8 +8,6 @@ export const [selectedImage, setSelectedImage] = createSignal(
 );
 
 export default function App() {
-	const [count, setCount] = createSignal(0);
-
 	return (
 		<>
 			<Header />
@@ -29,13 +28,7 @@ export default function App() {
 						</figcaption>
 					</figure>
 
-					<section class="w-full">
-						<h1 class="text-red">Vite + Solid</h1>
-						{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-						<button onClick={() => setCount((count) => count + 1)}>
-							count is {count()}
-						</button>
-					</section>
+					<ProductDetails />
 				</article>
 			</main>
 		</>
