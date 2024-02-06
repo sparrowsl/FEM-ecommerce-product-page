@@ -1,7 +1,7 @@
 import { For } from "solid-js";
-import logo from "../assets/icons/logo.svg";
-import shoppingCart from "../assets/icons/icon-cart.svg";
-import avatar from "../assets/images/image-avatar.png";
+import shoppingCart from "/assets/icons/icon-cart.svg";
+import logo from "/assets/icons/logo.svg";
+import avatar from "/assets/images/image-avatar.png";
 
 const links = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -13,10 +13,10 @@ export default function Header() {
 					<img src={logo} alt="Sneakers" />
 				</a>
 
-				<ul class="flex gap-5 items-center ml-10">
+				<ul class="flex gap-7 items-center ml-10">
 					<For each={links}>
 						{(link) => (
-							<li>
+							<li class="text-dark_grayish_blue">
 								<a href="/">{link}</a>
 							</li>
 						)}
