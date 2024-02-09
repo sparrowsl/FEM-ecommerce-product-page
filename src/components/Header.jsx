@@ -2,6 +2,7 @@ import { For } from "solid-js";
 import shoppingCart from "/assets/icons/icon-cart.svg";
 import logo from "/assets/icons/logo.svg";
 import avatar from "/assets/images/image-avatar.png";
+import Cart from "./Cart.jsx";
 
 const links = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -26,8 +27,9 @@ export default function Header() {
 				</ul>
 
 				<section class="ml-auto flex gap-10 items-center">
-					<div>
+					<div class="relative">
 						<img src={shoppingCart} alt="Shopping Cart" />
+						<Cart />
 					</div>
 					<img
 						src={avatar}
