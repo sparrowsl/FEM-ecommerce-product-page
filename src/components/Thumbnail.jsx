@@ -4,16 +4,11 @@ import { selectedImage, setSelectedImage } from "../App.jsx";
 export function Thumbnail(props) {
 	return (
 		<>
-			<button
-				type="button"
-				onClick={() => setSelectedImage(props.src)}
-				class="relative">
+			<button type="button" onClick={() => setSelectedImage(props.src)} class="relative">
 				<img
 					src={props.src}
 					alt={props.alt || "Product"}
-					class={`${
-						selectedImage() === props.src && "border-orange border-3"
-					} rounded-lg`}
+					class={`${selectedImage() === props.src && "border-orange border-3"} rounded-lg`}
 				/>
 			</button>
 		</>

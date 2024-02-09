@@ -8,7 +8,7 @@ const links = ["Collections", "Men", "Women", "About", "Contact"];
 export default function Header() {
 	return (
 		<>
-			<nav class="container flex items-center min-h-10vh border-b font-kumbhsans">
+			<nav class="container flex items-center border-b font-kumbhsans">
 				<a href="/" class="block">
 					<img src={logo} alt="Sneakers" />
 				</a>
@@ -16,17 +16,25 @@ export default function Header() {
 				<ul class="flex gap-7 items-center ml-10">
 					<For each={links}>
 						{(link) => (
-							<li class="text-dark_grayish_blue">
-								<a href="/">{link}</a>
+							<li class="text-dark_grayish_blue border-b-3 border-white hover:(border-b-3 border-orange) py-7">
+								<a href="/" class="hover:text-black">
+									{link}
+								</a>
 							</li>
 						)}
 					</For>
 				</ul>
 
-				<div class="ml-auto flex gap-10 items-center">
-					<img src={shoppingCart} alt="Shopping Cart" />
-					<img src={avatar} alt="Profile Avatar" class="w-12" />
-				</div>
+				<section class="ml-auto flex gap-10 items-center">
+					<div>
+						<img src={shoppingCart} alt="Shopping Cart" />
+					</div>
+					<img
+						src={avatar}
+						alt="Profile Avatar"
+						class="w-12 hover:(border-2 border-orange rounded-full cursor-pointer)"
+					/>
+				</section>
 			</nav>
 		</>
 	);

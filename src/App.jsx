@@ -12,12 +12,12 @@ export default function App() {
 		<>
 			<Header />
 
-			<main class="container font-kumbhsans min-h-90vh flex flex-col justify-center">
+			<main class="container font-kumbhsans min-h-85vh flex flex-col justify-center">
 				<article class="flex items-center px-20 gap-20">
 					<figure class="w-full max-w-25rem">
 						<img src={selectedImage()} alt="" class="max-w-25em rounded-xl" />
 						<figcaption class="grid grid-cols-4 gap-5 mt-7">
-							<For each={new Array(4)}>
+							<For each={Array.from({ length: 4 })}>
 								{(_, i) => (
 									<Thumbnail
 										src={`/assets/images/image-product-${i() + 1}.jpg`}
