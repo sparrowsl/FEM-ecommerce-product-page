@@ -3,6 +3,7 @@ import shoppingCart from "/assets/icons/icon-cart.svg";
 import logo from "/assets/icons/logo.svg";
 import avatar from "/assets/images/image-avatar.png";
 import Cart from "./Cart.jsx";
+import { amount } from "./ProductDetails.jsx";
 
 const links = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -26,11 +27,14 @@ export default function Header() {
 					</For>
 				</ul>
 
-				<section class="ml-auto flex gap-10 items-center">
-					<div class="relative">
+				<section class="ml-auto flex gap-10 items-center relative group">
+					<div class="peer relative cursor-pointer">
 						<img src={shoppingCart} alt="Shopping Cart" />
-						<Cart />
+						<span class="absolute -top-2 left-2 block text-0.6rem bg-orange text-white px-2 rounded-full">
+							{amount()}
+						</span>
 					</div>
+					<Cart />
 					<img
 						src={avatar}
 						alt="Profile Avatar"

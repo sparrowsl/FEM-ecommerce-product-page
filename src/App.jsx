@@ -3,9 +3,7 @@ import Header from "./components/Header.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import { Thumbnail } from "./components/Thumbnail.jsx";
 
-export const [selectedImage, setSelectedImage] = createSignal(
-	"/assets/images/image-product-1.jpg"
-);
+export const [selectedImage, setSelectedImage] = createSignal("/assets/images/image-product-1.jpg");
 
 export default function App() {
 	return (
