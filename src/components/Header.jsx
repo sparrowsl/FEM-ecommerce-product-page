@@ -10,7 +10,7 @@ const links = ["Collections", "Men", "Women", "About", "Contact"];
 export default function Header() {
 	return (
 		<>
-			<nav class="container flex items-center border-b font-kumbhsans">
+			<nav class="container flex items-center border-b border-b-gray-500 font-kumbhsans">
 				<a href="/" class="block">
 					<img src={logo} alt="Sneakers" />
 				</a>
@@ -30,7 +30,7 @@ export default function Header() {
 				<section class="ml-auto flex gap-10 items-center relative group">
 					<div class="peer relative cursor-pointer">
 						<img src={shoppingCart} alt="Shopping Cart" />
-						<span class="absolute -top-2 left-2 block text-0.6rem bg-orange text-white px-2 rounded-full">
+						<span class="absolute -top-2 left-2 block text-[0.6rem] bg-orange text-white px-2 rounded-full">
 							{amount()}
 						</span>
 					</div>
@@ -38,7 +38,7 @@ export default function Header() {
 					<img
 						src={avatar}
 						alt="Profile Avatar"
-						class="w-12 hover:(border-2 border-orange rounded-full cursor-pointer)"
+						class="w-12 hover:border hover:border-orange hover:rounded-full hover:cursor-pointer"
 					/>
 				</section>
 			</nav>

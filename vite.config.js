@@ -1,7 +1,7 @@
-import unocss from "unocss/vite";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import solid from "vite-plugin-solid";
 
 export default defineConfig({
-	plugins: [unocss(), solid()],
+	plugins: [ tailwindcss(),solid()],
 });
